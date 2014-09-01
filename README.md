@@ -43,17 +43,25 @@ project/
 
 ##基础流程
 
-###1、配置开发环境
-
-环境依赖（安装）：  
+###1、安装环境
+  
 * [nodejs](http://nodejs.org/) 
 * [prepros](http://alphapixels.com/prepros/)
 * [vastl](https://github.com/everyonme/vastl) (vasteam 定制工具包）
 	
 		npm i -g vastl
 	
+###2、配置
 
-###2、开始生产
+prepros ：
+
+css配置
+![alt css](img/css.png)
+html配置
+![alt html](img/html.png)
+
+
+###3、开始生产
 
 进入开发目录，根据工程结构创建目录然后通过命令行创建配置文件
 
