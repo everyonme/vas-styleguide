@@ -13,7 +13,7 @@
 > 后续可以考虑为 stylus 开发一个sprite插件；
 	
     
-##工程结构
+##<a id="a1"></a>工程结构
 
 注意： 都以文件类型命名文件夹
 ```
@@ -51,14 +51,18 @@ project/
 安装 [prepros](http://alphapixels.com/prepros/)
 
 安装  [vastl](https://github.com/everyonme/vastl) (vasteam 定制工具包）
+
 命令行
+
 	npm i -g vastl
 	
 
 2、开始生产
 
-进入开发目录，根据[工程结构](#工程结构)建好目录
+进入开发目录，根据[工程结构](#a1)录
+
 命令行
+
 	vastl init --usecompass
 
 然后会发现工程目录里多了 ， project.js 和 config.rb 两个配置文件。
