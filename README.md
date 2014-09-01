@@ -13,7 +13,7 @@
 > 后续可以考虑为 stylus 开发一个sprite插件；
 	
     
-##<a id="a1"></a>工程结构
+##工程结构
 
 注意： 都以文件类型命名文件夹
 ```
@@ -43,33 +43,27 @@ project/
 
 ##基础流程
 
-1、配置开发环境
+###1、配置开发环境
 
-环境依赖：  
-安装 [nodejs](http://nodejs.org/) 
-
-安装 [prepros](http://alphapixels.com/prepros/)
-
-安装  [vastl](https://github.com/everyonme/vastl) (vasteam 定制工具包）
-
-命令行
-
-	npm i -g vastl
+环境依赖（安装）：  
+* [nodejs](http://nodejs.org/) 
+* [prepros](http://alphapixels.com/prepros/)
+* [vastl](https://github.com/everyonme/vastl) (vasteam 定制工具包）
+	
+		npm i -g vastl
 	
 
-2、开始生产
+###2、开始生产
 
-进入开发目录，根据[工程结构](#a1)录
-
-命令行
+进入开发目录，根据工程结构创建目录然后通过命令行创建配置文件
 
 	vastl init --usecompass
 
-然后会发现工程目录里多了 ， project.js 和 config.rb 两个配置文件。
+然后会发现工程目录里多了project.js 和 config.rb 两个配置文件。
 
 打开 project.js 好好配置一下，非常简单。
 
-常用就几个命令
+常用命令：
 ```
 	#生成离线包 -> ./offline/offline.zip
 	vastl zip
@@ -82,6 +76,5 @@ project/
 	
 	#clean，清洁工作，删除一些临时文件
 	vastl clean
-	
 	
 ```
