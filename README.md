@@ -34,6 +34,9 @@ project/
     #离线包
 	offline
     	offline.zip
+    	
+    #测试
+	test
         
     #工程配置
 	project.js 
