@@ -29,6 +29,7 @@ project/
 	dist/
     	img
         css
+        font
         html
         
     #离线包
@@ -67,7 +68,7 @@ html配置
 ![alt html](img/html.png)
 
 
-###3、开始生产
+###3、生产
 
 进入开发目录，根据工程结构创建目录然后通过命令行创建配置文件
 
