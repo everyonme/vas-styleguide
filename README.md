@@ -79,17 +79,31 @@ html配置
 打开 project.js 好好配置一下，非常简单。
 
 常用命令：
+
+生成离线包(如： .dist/ -> ./offline/offline.zip)
 ```
-	#生成离线包 -> ./offline/offline.zip
 	vastl zip
-	
-	#CSS 根据配置自动加前缀 如:  transform ->  -webkit-transform
-	vastl prefix
-	
-	#copy，根据配置复制文件  src/ -> dist/
-	vastl copy
-	
-	#clean，清洁工作，删除一些临时文件
-	vastl clean
-	
 ```
+
+样式属性自动加前缀 （如： transform ->  -webkit-transform）
+```
+	vastl prefix
+```
+
+复制 （如：复制文件  src/ -> dist/）
+```
+	vastl copy
+```
+
+清洁 （如：删除一些临时文件）
+```
+	vastl clean
+```
+
+
+## todo
+
+1. sass 语法指南
+2. 离线包参数完善
+3. ftp功能整合
+4. GUI
