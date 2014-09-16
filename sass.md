@@ -2,6 +2,32 @@
 
 指南的目的在于开发舒适度与规则取得平衡
 
+包含以下内容：
+- 文件结构
+- 命名空间
+- 模块构成
+
+
+## 文件结构
+
+```
+_global
+  ├─src
+      ├─ img
+      ├─ sass
+          ├─ _reset.scss
+          ├─ _mixins.scss           
+          ├─ _icons.scss
+          ├─ _buttons.scss         
+          ├─ _modals.scss          
+          ├─ _animation             
+          │    ├─ _animation.scss
+          │    ├─ _bounce.scss
+          │    └─ ... 
+          ├─ ...         
+          └─global.scss 
+```
+
 ## 命名空间
 
 有几种对象需要命名空间：
@@ -16,17 +42,15 @@
 
 目前已使用命名空间：
 
- 前缀| 含义 | 类型 | 备注  
------|------|------|-----
- .i- | 图标 | 实体 |`.i-vip` 
- .b- | 按钮 | 实体 |`.b-primary`
- .m- | 模块 | 实体 | 指代除图标/按钮以外的所有模块 如 `.m-modal`
- .a- | 动画 | 动画 |`.a-bounce` 
+ 前缀| 含义 | 备注  
+-----|------|-----------
+ _   | 原型 | `._i` 
+ .i- | 图标 | `.i-vip` 
+ .b- | 按钮 | `.b-primary`
+ .m- | 模块 | 指代除图标/按钮以外的所有模块 如 `.m-modal`
+ .a- | 动画 | `.a-bounce` 
  
  
- 
-模块举例
-
 模块命名参考主流命名方式，比如目前为止影响最广的 bootstrap
 
  模块名     | 含义   
@@ -44,6 +68,8 @@
 ```
 $_iconSprite:sprite-map("sp_ico/*.png");
 ```
+
+
 ### 3、Mixin 函数
 
 统一以`_模块名` 作为命名空间，结合驼峰使用 如 `_iconSprite(){}`
@@ -86,8 +112,6 @@ $_iconSprite:sprite-map("sp_ico/*.png");
 
 
 
-
-
 ## 模块构成
 这里模块分为两种类型：
 - 实体模块
@@ -104,11 +128,11 @@ $_iconSprite:sprite-map("sp_ico/*.png");
 
 以 icon 模块为例
 
-
 模块中用到的变量
 ``` scss
 $_iconSp:sprite-map("sp_ico/*.png");
 ```
+
 
 模块中用到的mixin
 ``` scss
@@ -120,10 +144,11 @@ $_iconSp:sprite-map("sp_ico/*.png");
 }
 ```
 
+
+模块的原型
 ``` scss
 // 原型类 (下划线前缀表明这是一个“原型类”)
 // 它包含此类模块的基础结构与属性信息
-// 它的作用是用来生成实例
 ._i {
   display: inline-block;
 }
@@ -144,14 +169,14 @@ $_iconSp:sprite-map("sp_ico/*.png");
 
 ###动画模块
 
-####动画模块应该包含
-- @keframes
+####动画模块应该包含：
+- @keyframes
 - @mixin
 - 调用类
 - 默认参数值（也可以是全局公用）
 
 
-@keframes
+@keyframes
 ```scss
 @keyframes _bounce {
   0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
@@ -182,9 +207,9 @@ $_iconSp:sprite-map("sp_ico/*.png");
 
 默认参数值
 ```scss
-$duration: 1s;
-$delay: .2s;
-$function: ease;
-$fill: both;
-$visibility: hidden;
+$_duration: 1s;
+$_delay: .2s;
+$_function: ease;
+$_fill: both;
+$_visibility: hidden;
 ```
