@@ -62,7 +62,7 @@ _global
 
 ### 2、变量
 
-统一以`_模块名` 作为命名空间,结合驼峰使用 如 `$_iconSprite`
+统一以`$_模块名` 作为命名空间,结合驼峰使用 如 `$_iconSprite`
 
 例子：
 ```
@@ -93,13 +93,12 @@ $_iconSprite:sprite-map("sp_ico/*.png");
   fill-mode:$fill;
   visibility:$visibility;
 }
-
 ```
 
 
 ### 4、动画 keyframes
 
-统一以`_动画名` 作为命名空间，结合驼峰使用 如 `_bounceIn()`
+统一以 `_动画名` 作为命名空间，结合驼峰使用 如 `_bounceIn{}`
 
 例子：
 ```scss
@@ -146,18 +145,17 @@ $_iconSp:sprite-map("sp_ico/*.png");
 
 
 模块的原型
+
+它包含此类模块的基础结构与属性信息
 ``` scss
-// 原型类 (下划线前缀表明这是一个“原型类”)
-// 它包含此类模块的基础结构与属性信息
 ._i {
   display: inline-block;
 }
 ```
 
-// 模块的一个实例
+// 通过继承原型得到一个实例
 ``` scss
 .i-new{
-  // 继承 ._i
   @extend ._i; 
   @include _iconSp(new);
   position: absolute;
@@ -169,7 +167,7 @@ $_iconSp:sprite-map("sp_ico/*.png");
 
 ###动画模块
 
-####动画模块应该包含：
+####动画模块包含：
 - @keyframes
 - @mixin
 - 调用类
