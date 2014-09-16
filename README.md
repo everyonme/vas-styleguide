@@ -1,5 +1,15 @@
 # Vasteam style guide -v0.1.0
 
+包含三个部分
+
+- 编码规则：[global样式维护指南](https://github.com/everyonme/vas-styleguide/blob/master/sass.md)
+- 工程结构
+- 环境配置
+- 生产过程
+
+
+##编码规则
+
 编码:  `utf-8`
 
 缩进:  `2空格`
@@ -11,51 +21,38 @@
 > 之所以用 compass 是因为目前[stylus](http://learnboost.github.io/stylus/) 还没有对sprite支持比较好的插件；
 
 > 后续可以考虑为 stylus 开发一个sprite插件；
-	
+  
     
 ##工程结构
 
 注意： 都以文件类型命名文件夹
 ```
 project/
-
-	#开发目录
-	src/ 
-    	img
-        sass
-        jade
-        
-    #发布目录
-	dist/
-    	img
-        css
-        font
-        html
-        
-    #离线包
-	offline
-    	offline.zip
-    	
-    #测试
-	test
-        
-    #工程配置
-	project.js 
-    
+  ├─src             #开发目录
+  │  ├─ img
+  │  ├─ sass
+  │  └─ jade
+  ├─dist             #发布目录
+  │  ├─ img
+  │  ├─ css
+  │  ├─ font
+  │  └─ html
+  ├─test             #测试
+  └─project.js       #配置
 ```
 
 
-##基础流程
+##环境配置
 
-###1、安装环境
+###安装
   
 * [nodejs](http://nodejs.org/) 
 * [prepros](http://alphapixels.com/prepros/)
 * [vastl](https://github.com/everyonme/vastl) (vasteam 定制工具包）
-	
-		npm i -g vastl
-	
-###2、配置
+  
+    npm i -g vastl
+  
+###配置
 
 prepros ：
 
@@ -68,11 +65,11 @@ html配置
 ![alt html](img/html.png)
 
 
-###3、生产
+##生产
 
 进入开发目录，根据工程结构创建目录然后通过命令行创建配置文件
 
-	vastl init --usecompass
+  vastl init --usecompass
 
 然后会发现工程目录里多了project.js 和 config.rb 两个配置文件。
 
@@ -82,22 +79,22 @@ html配置
 
 生成离线包(如： .dist/ -> ./offline/offline.zip)
 ```
-	vastl zip
+  vastl zip
 ```
 
 样式属性自动加前缀 （如： transform ->  -webkit-transform）
 ```
-	vastl prefix
+  vastl prefix
 ```
 
 复制 （如：复制文件  src/ -> dist/）
 ```
-	vastl copy
+  vastl copy
 ```
 
 清洁 （如：删除一些临时文件）
 ```
-	vastl clean
+  vastl clean
 ```
 
 
