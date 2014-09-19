@@ -10,11 +10,13 @@
 
 ## 文件结构
 
+文件命名需要注意： 统一给不单独编译的文件加上 下划线前缀比如 `_icons`
+
 ```
 _global
-  ├─src
+  └─src
       ├─ img
-      ├─ sass
+      └─ sass
           ├─ _reset.scss
           ├─ _mixins.scss           
           ├─ _icons.scss
@@ -27,6 +29,10 @@ _global
           ├─ ...         
           └─global.scss 
 ```
+
+
+
+
 
 ## 命名空间
 
@@ -44,7 +50,7 @@ _global
 
  前缀| 含义 | 备注  
 -----|------|-----------
- _   | 原型 | `._i` 
+ _   | 原型 | 如icon组件的原型 `._i` 
  .i- | 图标 | `.i-vip` 
  .b- | 按钮 | `.b-primary`
  .m- | 模块 | 指代除图标/按钮以外的所有模块 如 `.m-modal`
