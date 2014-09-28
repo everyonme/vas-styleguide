@@ -67,35 +67,9 @@ html配置
 
 ##生产
 
-进入开发目录，根据工程结构创建目录然后通过命令行创建配置文件
+使用 vastl 结合 prepros
 
-  vastl init --usecompass
-
-然后会发现工程目录里多了project.js 和 config.rb 两个配置文件。
-
-打开 project.js 好好配置一下，非常简单。
-
-常用命令：
-
-生成离线包(如： .dist/ -> ./offline/offline.zip)
-```
-  vastl zip
-```
-
-样式属性自动加前缀 （如： transform ->  -webkit-transform）
-```
-  vastl prefix
-```
-
-复制 （如：复制文件  src/ -> dist/）
-```
-  vastl copy
-```
-
-清洁 （如：删除一些临时文件）
-```
-  vastl clean
-```
+vastl 文档 ：[https://github.com/everyonme/vastl](https://github.com/everyonme/vastl)
 
 
 ## todo
