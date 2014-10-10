@@ -2,7 +2,7 @@
 
 包含三个部分
 
-- 编码规则：[global样式维护指南](https://github.com/everyonme/vas-styleguide/blob/master/sass.md)
+- 编码规则：[global样式维护指南](https://github.com/everyonme/vas-styleguide/blob/master/global-sass.md)
 - 工程结构
 - 环境配置
 - 生产过程
